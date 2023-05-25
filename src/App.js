@@ -1,12 +1,23 @@
-import React from "react"
+import React, { useState } from 'react';
+import Card from './components/Card';
 import 'bootstrap/dist/css/bootstrap.css'
-import ListGroup from './components/ListGroup.jsx'
-function App () {
-  return (
-    <>  
-      <ListGroup/>
-    </>
-  )
+
+
+function App(props) {
+    const [counter , setCounter] = useState(0)
+    return (
+        // <div>
+        //     <Card/>   
+        // </div>
+        <div>
+            <p>
+                {counter}
+            </p>
+            <button onClick={()=>{
+                setCounter(counter+1)
+            }}>Couter</button>
+        </div>
+    );
 }
 
-export default App
+export default App;
