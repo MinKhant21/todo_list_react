@@ -4,19 +4,19 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 
 function App(props) {
-    const [counter , setCounter] = useState(0)
+    // const [counter , setCounter] = useState(0)
     return (
-        // <div>
-        //     <Card/>   
-        // </div>
         <div>
-            <p>
-                {counter}
-            </p>
-            <button onClick={()=>{
-                setCounter(counter+1)
-            }}>Couter</button>
+            <Card/>   
         </div>
+        // <div>
+        //     <p>
+        //         {counter}
+        //     </p>
+        //     <button onClick={()=>{
+        //         setCounter(counter+1)
+        //     }}>Couter</button>
+        // </div>
     );
 }
 
