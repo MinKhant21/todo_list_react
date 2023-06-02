@@ -1,31 +1,31 @@
-import react, { useReducer, useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 
-const reducer = (state,action) =>{
-    switch (action.type) {
-        case "INCREMENT":
-            return 
-            break;
-    
-        default:
-            break;
-    }
-}
-const App = (props) => {
-    // const [counter,setcounter] = useState(0)
-    // const [showText,setshowText] = useState(true)
-    const [state,dispatch] = useReducer(reducer,{counter:0,showText:true})
-    const  hello = () =>{
-        setcounter(counter+1)
-        setshowText(!showText)
+function App(props) {
+    let [posts,setposts] = useState([
+        {id:1,name:'kmk'},
+        {id:2,name:'min'},
+        {id:3,name:'Khant'}
+    ]);
+    let DeletePost = (id) => {
+      setposts((prevState)=>
+        prevState.filter(post=>post.id != id)
+      )
     }
     return (
-        <>
-            {counter}
-            <button onClick={hello}>Click</button>
-            <p>
-                {showText ? 'this is text' : ""}
-            </p>
-        </>
-    )
+        <div>
+            <ul>
+              {!! posts.length &&
+                posts.map(post=>
+                    <li key={post.id}>{post.name} <button onClick={()=>DeletePost(post.id)}>Delete</button></li>
+                   ) 
+              }  
+
+             
+              {!posts.length && 'Not Have Post'}
+            </ul>
+        </div>
+    );
 }
-export default App
+
+export default App;
