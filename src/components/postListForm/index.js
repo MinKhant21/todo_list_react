@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 function PostListForm(props) {
     let [title , settitle] = useState("");
+  
     return (
         <div className='form-group'>
             <div className='form-control'>
