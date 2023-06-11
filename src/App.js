@@ -1,26 +1,22 @@
-import React from 'react';
-import { useState } from 'react';
-import Nav from './components/Nav/index';
-import PostList from './components/PostList/index';
-import  Modal  from './components/Modal/index';
-import PostListForm from './components/postListForm/index';
+// import './reset.css';
+import './App.css';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
+import CheckAllTodo from './components/CheckAllTodo';
+import FilterTodoBtn from './components/FilterTodoBtn';
 
-function App(props) {
-   
-  
-   
-    let [showModal , setshwoModal] = useState(false)
-    return (
-       <>
-        <Nav setshwoModal={setshwoModal}/>
-        <PostList/>
-        {
-            showModal && <Modal setshwoModal={setshwoModal} showModal={showModal}>
-              <PostListForm/>
-            </Modal>
-        }
-       </>
-    );
+function App() {
+  return (
+    <div className="todo-app-container">
+      <div className="todo-app">
+        <h2>Todo App</h2>
+        <TodoForm />
+        <TodoList/>
+        <CheckAllTodo/>
+        <FilterTodoBtn/>
+      </div>
+    </div>
+  );
 }
 
 export default App;
