@@ -1,16 +1,24 @@
 {
-    "trips" : [
-        {
-            "name" : "2 nights in Chaung Tha",
-            "price" : 100000
-        },
-        {
-            "name" : "1 night in Kalaw",
-            "price" : 120000
-        },
-        {
-            "name" : "3 nights in Ngapali",
-            "price" : 300000
-        }
-    ]
-  }
+  "todos": [
+    {
+      "id": 2,
+      "title": "My second Todo",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "My Third Todo",
+      "completed": false
+    },
+    {
+      "id": 0.6217415596013833,
+      "title": "fourth todo",
+      "completed": false
+    },
+    {
+      "id": 0.6886927970464651,
+      "title": "hello",
+      "completed": false
+    }
+  ]
+}
