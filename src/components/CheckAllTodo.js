@@ -1,10 +1,10 @@
 import React from "react";
 
-function CheckAllTodo({remainingCount}){
+function CheckAllTodo({remainingCount,Checkall}){
     return(
       <div className="check-all-container">
         <div>
-          <div className="button">Check All</div>
+          <div className="button" onClick={Checkall}>Check All</div>
         </div>
         <span>{remainingCount} item{`${remainingCount > 1 ? 's':''}`} remaining</span>
       </div>
